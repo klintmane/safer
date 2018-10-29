@@ -18,6 +18,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../build"),
+    libraryTarget: "umd",
     publicPath: "/",
     filename: "[name].js",
     chunkFilename: "[name].js"
