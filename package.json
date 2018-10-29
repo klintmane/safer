@@ -1,7 +1,7 @@
 {
   "name": "safer-workspaces",
   "version": "0.0.1",
-  "main": "dist/safer.js",
+  "main": "build/safer.js",
   "private": true,
   "workspaces": [
     "packages/*"
