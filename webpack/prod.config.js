@@ -8,5 +8,9 @@ module.exports = {
     safer: ["./packages/safer"]
   },
   mode: "production",
-  devtool: "source-map"
+  devtool: "source-map",
+  externals: {
+    react: "react",
+    "react-dom": "react-dom"
+  }
 };
