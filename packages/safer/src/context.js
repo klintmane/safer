@@ -11,5 +11,3 @@ export const newContext = (key, initial = {}) => {
 export const getContext = key => contexts[key];
 
 newContext("__no_context", { set: () => {}, get: () => {} });
-
-export default React.createContext({});

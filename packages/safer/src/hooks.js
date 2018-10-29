@@ -9,14 +9,10 @@ export const useStores = (...keys) => {
     setStores(s);
   };
 
+  // Run only once
   useEffect(() => {
     handleSetStores(contexts);
-
-    // Cleanup
-    return () => {};
-  });
+  }, []);
 
   return stores;
 };
-
-export default useStores;
