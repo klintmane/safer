@@ -5,7 +5,7 @@ import Toggle from "./Toggle";
 import Inspector from "./Inspector";
 
 class DevTools extends React.PureComponent {
-  state = { shown: true };
+  state = { shown: false };
 
   toggleShown = () => this.setState({ shown: !this.state.shown });
 
