@@ -18,7 +18,8 @@
     "webpack-dev-server": "^3.1.9"
   },
   "scripts": {
-    "start": "yarn && webpack-dev-server --config ./webpack/dev.config.js",
-    "build": "yarn && webpack --config ./webpack/prod.config.js"
+    "start": "yarn && webpack-dev-server --config ./webpack/start.config.js",
+    "build": "yarn && webpack --config ./webpack/build.config.js",
+    "build:devtools": "yarn && webpack --config ./webpack/build:devtools.config.js"
   }
 }

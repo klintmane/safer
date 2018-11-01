@@ -13,19 +13,10 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx", ".json"]
   },
-  entry: {
-    devtools: ["./packages/safer-devtools"]
-  },
   output: {
     path: path.resolve(__dirname, "../build"),
     libraryTarget: "umd",
     publicPath: "/",
-    filename: "[name].js",
-    chunkFilename: "[name].js"
-  },
-  optimization: {
-    splitChunks: {
-      chunks: "async"
-    }
+    filename: "[name].js"
   }
 };
