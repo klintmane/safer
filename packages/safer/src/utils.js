@@ -8,8 +8,6 @@ const parsePath = (path = "") =>
     .filter(key => !!key)
     .map(key => (isNaN(key) ? stripQuotes(key) : parseInt(key)));
 
-export const clone = obj => JSON.parse(JSON.stringify(obj));
-
 export const get = (obj, path, defaultValue) =>
   parsePath(path).reduce((val, key) => (val ? val[key] : defaultValue), obj);
 
