@@ -1,5 +1,5 @@
 import React from "react";
-import { set } from "./utils";
+import { set, clone } from "./utils";
 import { newContext, getContext } from "./context";
 import { notify } from "./listeners";
 
@@ -14,7 +14,7 @@ class Store extends React.Component {
     }
 
     const { name = "default" } = this.props;
-    const store = { ...set(this.state.store, key, val) }; // Use object.assign to force a provider update (change value reference)
+    const store = set(clone(this.state.store), key, val);
 
     notify("update", { store, change: { name, key, val } });
     this.setState({ store });
